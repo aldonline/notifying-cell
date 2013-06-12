@@ -1,0 +1,19 @@
+{
+  "name": "radioactive-cell",
+  "version": "0.0.3",
+  "description": "radioactive-cell",
+  "author": "Aldo Bucchi <aldo.bucchi@gmail.com>",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "devDependencies": {
+    "mocha": "~1.9.0",
+    "chai": "~1.5.0"
+  },
+  "repository": "",
+  "dependencies": {
+    "coffee-script": "~1.6.3",
+    "reactive-commons": "0.0.4"
+  }
+}
