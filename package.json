@@ -1,6 +1,6 @@
 {
   "name": "radioactive-cell",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "radioactive-cell",
   "author": "Aldo Bucchi <aldo.bucchi@gmail.com>",
   "main": "lib/cell.js",
