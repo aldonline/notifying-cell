@@ -8,6 +8,8 @@ describe 'a cell', ->
   it 'should initially be undefined', -> should.not.exist c1()
   it 'should accept a string', -> c1 'hello'
   it 'should now return the string', -> c1().should.equal 'hello'
+  it 'value() should be eqivalent', -> c1.value().should.equal 'hello'
+
   it 'should accept a different string', -> c1 'hello2'
   it 'should now return the new string', -> c1().should.equal 'hello2'
   it 'should return undefined when set', ->
@@ -32,3 +34,6 @@ describe 'a cell', ->
     c1 err # passing error
   it 'and throw it...', -> c1.should.throw 'abc'
   it 'and throw it again', -> c1.should.throw 'abc'
+
+  it 'should return ( not throw ) the error via value()', ->
+    c1.value().should.be.an.instanceOf Error

@@ -37,6 +37,7 @@ module.exports = cell = ->
     if arguments.length > 0
       throw new ReadOnlyError
     f()
+  f.value = -> value
   f
 
 cell.ReadOnlyError = ReadOnlyError
