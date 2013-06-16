@@ -1,7 +1,7 @@
 {
-  "name": "radioactive-cell",
+  "name": "notifying-cell",
   "version": "0.0.7",
-  "description": "radioactive-cell",
+  "description": "A Variable/Slot/Box that holds one value. Notifying.js compatible ",
   "author": "Aldo Bucchi <aldo.bucchi@gmail.com>",
   "main": "lib/cell.js",
   "scripts": {
@@ -18,6 +18,6 @@
   },
   "repository": "",
   "dependencies": {
-    "reactive-commons": "0.0.8"
+    "notifying": "0.0.11"
   }
 }
