@@ -1,7 +1,7 @@
 {
-  "name": "notifying-cell",
+  "name": "reactive-cell",
   "version": "0.0.7",
-  "description": "A Variable/Slot/Box that holds one value. Notifying.js compatible ",
+  "description": "A Variable/Slot/Box that holds one value. reactivity.io compatible",
   "author": "Aldo Bucchi <aldo.bucchi@gmail.com>",
   "main": "lib/cell.js",
   "scripts": {
@@ -18,6 +18,6 @@
   },
   "repository": "",
   "dependencies": {
-    "notifying": "0.0.11"
+    "reactivity": "0.0.0"
   }
 }

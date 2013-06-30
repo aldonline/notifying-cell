@@ -1,4 +1,4 @@
-notifying = require 'notifying'
+reactivity = require 'reactivity'
 
 class ReadOnlyError extends Error
 class TooManyArgumentsError extends Error
@@ -14,7 +14,7 @@ module.exports = cell = ->
     a = arguments
     if a.length is 0 # GET
       # register invalidator
-      if notifying.active() then ( notifiers ?= [] ).push notifying()
+      if reactivity.active() then ( notifiers ?= [] ).push reactivity()
       # return/throw value
       if value instanceof Error then throw value else value
     else if a.length is 1 # SET
@@ -33,6 +33,7 @@ module.exports = cell = ->
     else
       throw new TooManyArgumentsError
   # a view does not take parameters and will throw an error
+  # it is a read-only version of the cell
   f.view = -> ->
     if arguments.length > 0
       throw new ReadOnlyError
