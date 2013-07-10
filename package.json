@@ -18,6 +18,6 @@
   },
   "repository": "",
   "dependencies": {
-    "reactivity": "0.0.0"
+    "reactivity": "1.0.0"
   }
 }
