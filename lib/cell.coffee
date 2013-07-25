@@ -63,7 +63,7 @@ module.exports = cell = ->
 
   # a read-only version of the cell
   f.immutable =  -> if arguments.length > 0 then throw new ReadOnlyError else f()
-  
+  f.callback = (e, r) -> f e, r
   f
 
 cell.ReadOnlyError = ReadOnlyError
