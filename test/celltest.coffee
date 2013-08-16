@@ -49,3 +49,24 @@ describe 'a cell', ->
     r = c1 new Error('oops'), null
     should.not.exist r
     c1.should.throw 'oops'
+
+
+describe 'a cell', ->
+  it 'should be reactive', ->
+    c = cell()
+    values = []
+    reactivity c, (e, r) -> values.push [e, r]
+    values.should.have.length 1
+    should.not.exist values[0][0]
+    should.not.exist values[0][1]
+    
+    c 'a'
+    values.should.have.length 2
+    should.not.exist values[1][0]
+    should.exist v = values[1][1]
+    v.should.equal 'a'
+
+    c null
+    values.should.have.length 3
+    should.not.exist values[2][0]
+    should.not.exist values[2][1]

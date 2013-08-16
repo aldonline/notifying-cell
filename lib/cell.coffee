@@ -11,6 +11,7 @@ class Box
     return false if new_v is @v
     @is_error = is_error
     @v = new_v
+    yes
 
   # will figure out values being passed
   # f(e), f(r), f(e, r)
